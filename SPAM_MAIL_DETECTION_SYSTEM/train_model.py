@@ -1,3 +1,4 @@
+# Imports necessary libraries
 import os
 import pandas as pd
 import numpy as np
@@ -13,19 +14,23 @@ import preprocessing
 
 
 def main():
+    # Step 1: Check Dataset
     if not os.path.exists('data/sms_spam.csv'):
         print("<!><!> Dataset not found: data/sms_spam.csv")
         return
 
+    # Step 2: Load & Preprocess Data
     print(">>>> Loading and preprocessing data...")
     df = preprocessing.load_and_preprocess_data('data/sms_spam.csv')
     texts = df['message'].values
     labels = df['label'].values
 
+    # Step 3: Encode Labels
     print(">>>> Encoding labels...")
     le = LabelEncoder()
     labels_encoded = le.fit_transform(labels)
 
+    # Step 4: Text Tokenization
     print(">>>> Tokenizing text...")
     vocab_size = 10000
     max_len = 120
@@ -34,6 +39,7 @@ def main():
     sequences = tokenizer.texts_to_sequences(texts)
     padded = pad_sequences(sequences, padding='post', maxlen=max_len)
 
+    # Step 5: Build Model
     print(">>>> Building model...")
     model = Sequential([
         Embedding(input_dim=vocab_size, output_dim=64, input_length=max_len),
@@ -43,25 +49,32 @@ def main():
         Dense(1, activation='sigmoid')
     ])
 
+    # Compiles the model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
+    # Training the model
     print(">>>> Training model...")
     model.fit(padded, labels_encoded, epochs=5, batch_size=32, validation_split=0.2, verbose=1)
 
+    # Savig the trained model
     print(">>>> Saving model and tokenizer...")
     os.makedirs('model', exist_ok=True)
     model.save('model/spam_detector_model.h5')
 
+    # Saves tokenizer for future use
     with open('model/tokenizer.pkl', 'wb') as f:
         pickle.dump(tokenizer, f)
-    
+
+    # Saves label encoder
     with open('model/label_encoder.pkl', 'wb') as f:
         pickle.dump(le, f)
 
+    # Model evaluation is done
     print(">>>> Evaluating model...")
     predictions = (model.predict(padded) > 0.5).astype("int32")
     print(classification_report(labels_encoded, predictions))
 
+    # Completion message is printed
     print(">>>> Training completed and model saved successfully.")
 
 
