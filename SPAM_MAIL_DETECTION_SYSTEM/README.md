@@ -68,30 +68,6 @@ FRAUD_DETECTION_SYSTEM/
 
 ---
 
-## ✅ IMPROVEMENTS MADE ==>
-
-- Added progress print statements for training and prediction.
-
-- Improved prediction confidence logic in predict.py.
-
-- Enhanced text cleaning (URLs, special characters, etc.).
-
-- Better spam detection accuracy using Bidirectional LSTM.
-
----
-
-## 📌 To Do / Future Enhancements ==>
-
-Add a GUI or web interface for predictions (Flask or Streamlit).
-
-Train with a larger, multilingual dataset.
-
-Implement model evaluation metrics (accuracy, F1-score).
-
-Save tokenizer and model version info for reproducibility.
-
----
-
 ## ✨ SAMPLE OUTPUT ==>
 
 📩 Message: Win a brand new iPhone for just $1. Claim now
@@ -105,5 +81,6 @@ Save tokenizer and model version info for reproducibility.
 ## 📬 CONTACT ==>
 
 For questions or feedback, feel free to reach out!
+
 
 ---
