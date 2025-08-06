@@ -70,10 +70,10 @@ FRAUD_DETECTION_SYSTEM/<br>
 
 ## ✨ SAMPLE OUTPUT ==>
 
-📩 Message: Win a brand new iPhone for just $1. Claim now
+📩 Message: Win a brand new iPhone for just $1. Claim now<br>
 🔍 Prediction: Spam (99.98% confidence)
 
-📩 Message: I will meet you in office.
+📩 Message: I will meet you in office.<br>
 🔍 Prediction: Not Spam (99.97% confidence)
 
 ---
@@ -84,4 +84,5 @@ For questions or feedback, feel free to reach out!
 
 
 ---
+
 
