@@ -1,0 +1,52 @@
+This file outlines the new intelligent features added to enhance the original spam detection project. These upgrades improve usability, interactivity, and decision support beyond binary spam classification.
+
+🚀 1. Intelligent Action Suggestion System ==>
+📌 Description: After detecting a message as Spam, the system now performs an additional analysis to:
+
+- Predict the type of spam (e.g., Phishing, Fake Job, Promotion, Scam, etc.)
+- Recommend context-specific user actions to deal with the spam (e.g., "Block Sender", "Report as Scam", "Delete Message")
+
+---
+
+🧠 2. Spam Type Classification ==>
+- A new machine learning model was trained using a labeled dataset (spam_suggestions.csv) containing 5,000+ spam messages. Each message is tagged with a spam_type such as:
+
+📧 Phishing
+💰 Fake Job
+🎯 Promotion
+🎲 Lottery
+🛑 Scam
+🦠 Malware
+- This allows the system to understand what kind of spam the message belongs to.
+
+---
+
+🔧 3. Action Recommendation Engine ==>
+- Using multi-label classification, the system suggests appropriate user actions for each spam type. Example actions include:
+
+✅ Do Not Respond
+🚫 Block Sender
+🗑️ Delete Message
+🐟 Report as Phishing
+📮 Unsubscribe
+- These actions are based on actual patterns in the training data and are predicted using a separate model (action_recommender.pkl).
+
+---
+
+🔄 4. Seamless Integration with Existing Pipeline ==>
+-The new suggestion engine is fully integrated with the original predict.py script.
+- After a message is flagged as Spam, it automatically:
+- Classifies the spam type
+- Fetches a set of recommended actions
+- Displays all output cleanly in the console
+
+---
+
+🗃️ New Files Introduced ==>
+- data/spam_suggestions.csv – Dataset for training the new features
+- suggestor/train_suggestion_models.py – Script to train and save the new models
+- model/spam_type_classifier.pkl – Classifier for spam types
+- model/action_recommender.pkl – Multi-label action recommender
+- model/mlb.pkl – MultiLabelBinarizer used to encode and decode action labels
+
+---
