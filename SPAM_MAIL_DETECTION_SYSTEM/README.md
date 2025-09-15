@@ -18,16 +18,7 @@
 
 ## 📁 PROJECT FOLDER STRUCTURE ==>
 
-FRAUD_DETECTION_SYSTEM/<br> 
-├── data/<br> 
-│   └── sms_spam.csv              # Dataset with labeled SMS messages<br> 
-├── model/<br> 
-│   ├── spam_detector_model.h5    # Trained LSTM model<br> 
-│   └── tokenizer.pkl             # Fitted tokenizer for preprocessing<br> 
-├── preprocessing.py              # Text cleaning and preprocessing functions<br> 
-├── train_model.py                # Code to train the LSTM model<br> 
-├── predict.py                    # Script to make predictions using trained model<br> 
-└── README.md                     # Project documentation
+
 
 ---
 
@@ -84,5 +75,6 @@ For questions or feedback, feel free to reach out!
 
 
 ---
+
 
 
