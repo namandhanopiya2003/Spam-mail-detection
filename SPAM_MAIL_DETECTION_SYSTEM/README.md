@@ -31,7 +31,7 @@ FRAUD_DETECTION_SYSTEM/<br>
 │   ├── spam_type_classifier.<br>
 │   └── tokenizer.pkl<br>              
 │<br>
-├── suggestor/ 
+├── suggestor/<br>
 │   ├── predict_suggestions.py                # Loads trained models and suggests actions<br>
 │   └── train_suggestion_models.py            # Script to train suggestion model<br>
 │<br>
@@ -96,6 +96,7 @@ For questions or feedback, feel free to reach out!
 
 
 ---
+
 
 
 
