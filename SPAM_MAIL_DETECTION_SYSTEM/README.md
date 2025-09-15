@@ -18,27 +18,27 @@
 
 ## 📁 PROJECT FOLDER STRUCTURE ==>
 
-FRAUD_DETECTION_SYSTEM/ 
-├── data/ 
-│   ├── sms_spam.csv                          # Dataset with labeled SMS messages 
-│   └── spam_suggestions_labeled.csv          # Dataset to train suggestion model
-│
-├── model/ 
-│   ├── action_labels.pkl
-│   ├── action_recommender.pkl
-│   ├── label_encoder.pkl
-│   ├── spam_detector_model.h5
-│   ├── spam_type_classifier.pkl                  
-│   └── tokenizer.pkl                          
-│
+FRAUD_DETECTION_SYSTEM/<br>
+├── data/<br>
+│   ├── sms_spam.csv                          # Dataset with labeled SMS messages<br>
+│   └── spam_suggestions_labeled.csv          # Dataset to train suggestion model<br>
+│<br>
+├── model/<br>
+│   ├── action_labels.pkl<br>
+│   ├── action_recommender.pkl<br>
+│   ├── label_encoder.pkl<br>
+│   ├── spam_detector_model.h5<br>
+│   ├── spam_type_classifier.<br>
+│   └── tokenizer.pkl<br>              
+│<br>
 ├── suggestor/ 
-│   ├── predict_suggestions.py                # Loads trained models and suggests actions
-│   └── train_suggestion_models.py            # Script to train suggestion model
-│
-├── preprocessing.py                          # Text cleaning and preprocessing functions 
-├── train_model.py                            # Code to train the LSTM model 
-├── predict.py                                # Script to make predictions using trained model 
-├── requirements.txt
+│   ├── predict_suggestions.py                # Loads trained models and suggests actions<br>
+│   └── train_suggestion_models.py            # Script to train suggestion model<br>
+│<br>
+├── preprocessing.py                          # Text cleaning and preprocessing functions<br>
+├── train_model.py                            # Code to train the LSTM model<br>
+├── predict.py                                # Script to make predictions using trained model<br>
+├── requirements.txt<br>
 └── README.md                                 # Project documentation
 
 ---
@@ -96,6 +96,7 @@ For questions or feedback, feel free to reach out!
 
 
 ---
+
 
 
 
