@@ -18,33 +18,33 @@
 
 ## 📁 PROJECT FOLDER STRUCTURE ==>
 
-FRAUD_DETECTION_SYSTEM/ 
-├── data/ 
-│   ├── sms_spam.csv                          # Dataset with labeled SMS messages 
-│   ├── spam_reason_labeled.csv 
-│   └── spam_suggestions_labeled.csv          # Dataset to train suggestion model
-│
-├── model/ 
-│   ├── action_labels.pkl
-│   ├── action_recommender.pkl
-│   ├── label_encoder.pkl
-│   ├── reason_classifier.pkl
-│   ├── reason_label_encoder.pkl
-│   ├── spam_detector_model.h5
-│   ├── spam_type_classifier.pkl                  
-│   ├── tokenizer.pkl  
-│   └── vectorizer.pkl                       
-│
-├── suggestor/ 
-│   ├── predict_reason.py                     # Predicts the reason (cause) behind a spam message
-│   ├── predict_suggestions.py                # Loads trained models and suggests actions
-│   ├── train_reason_model.py                 # Trains ML model that predicts the reason user might be receiving spam
-│   └── train_suggestion_models.py            # Script to train suggestion model
-│
-├── preprocessing.py                          # Text cleaning and preprocessing functions 
-├── train_model.py                            # Code to train the LSTM model 
-├── predict.py                                # Script to make predictions using trained model 
-├── requirements.txt
+FRAUD_DETECTION_SYSTEM/<br>
+├── data/<br>
+│   ├── sms_spam.csv                          # Dataset with labeled SMS messages<br>
+│   ├── spam_reason_labeled.csv<br>
+│   └── spam_suggestions_labeled.csv          # Dataset to train suggestion model<br>
+│<br>
+├── model/<br>
+│   ├── action_labels.pkl<br>
+│   ├── action_recommender.pkl<br>
+│   ├── label_encoder.pkl<br>
+│   ├── reason_classifier.pkl<br>
+│   ├── reason_label_encoder.pkl<br>
+│   ├── spam_detector_model.h5<br>
+│   ├── spam_type_classifier.pkl<br>
+│   ├── tokenizer.pkl<br>
+│   └── vectorizer.pkl<br>
+│<br>
+├── suggestor/<br>
+│   ├── predict_reason.py                     # Predicts the reason (cause) behind a spam message<br>
+│   ├── predict_suggestions.py                # Loads trained models and suggests actions<br>
+│   ├── train_reason_model.py                 # Trains ML model that predicts the reason user might be receiving spam<br>
+│   └── train_suggestion_models.py            # Script to train suggestion model<br>
+│<br>
+├── preprocessing.py                          # Text cleaning and preprocessing functions<br>
+├── train_model.py                            # Code to train the LSTM model<br>
+├── predict.py                                # Script to make predictions using trained model<br>
+├── requirements.txt<br>
 └── README.md                                 # Project documentation
 
 ---
@@ -102,6 +102,7 @@ For questions or feedback, feel free to reach out!
 
 
 ---
+
 
 
 
